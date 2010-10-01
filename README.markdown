@@ -20,10 +20,14 @@ change in CSS, and adapting the XHTML to symfony's template system.
 this package is just a placeholder for the real sfThemePlugin which is located at
 <http://github.com/weaverryan/sfThemePlugin>.*
 
+While waiting [weaverryan pull requests on sfThemePlugi](http://github.com/weaverryan/sfThemePlugin)
+to be accepted, you must use my fork:
+
   * Instaling Requirement
 
         cd /path_to_symfony_project/
-        git submodule add git://github.com/weaverryan/sfThemePlugin.git plugins/sfThemePlugin
+        git submodule add git://github.com/rafaelgou/sfThemePlugin.git plugins/sfThemePlugin
+        cd plugins/sfThemePlugin
         git submodule init
         git submodule update
 
@@ -43,7 +47,7 @@ this package is just a placeholder for the real sfThemePlugin which is located a
 
 ## Instalation ##
 
-  * Install the plugin (via a package)
+  * Install the plugin (via a package - not avaliable yet)
 
         ./symfony plugin:install themeTwentytenPlugin
 
