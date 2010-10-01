@@ -82,7 +82,7 @@ this package is just a placeholder for the real sfThemePlugin which is located a
 
     all:
       .settings:
-        enabled_modules: [default, ( ... ), theme_twentyten_demo]
+        enabled_modules: [default, ( other stuff ), theme_twentyten_demo]
 
 And you can access it with `http://www.your_symfony_domain.com/theme_twentyten_demo` and
 the XHTML Test Page in `http://www.your_symfony_domain.com/theme_twentyten_demo/xhtmlTestPage`.
@@ -246,7 +246,7 @@ Edit `themeTwentytenPlugin/config/app.yml` and add your template information:
         themes:
 
           twentyten:
-# ( ... )
+# ( other stuff )
           twentyten_newtemplate:
             layout:       twentyten_newtemplate
             templates_dir: themeTwentytenPlugin/templates/
@@ -451,7 +451,7 @@ As we want a basic support, so we just need the `style.css` stylesheet.
 
     all:
       .settings:
-        enabled_modules: [default, ( ... ), theme_basic_demo]
+        enabled_modules: [default, ( other stuff ), theme_basic_demo]
 
 ###Configuring first theme####
 
