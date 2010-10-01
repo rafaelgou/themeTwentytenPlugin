@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="EN" target-language="pt_BR" datatype="plaintext">
+    <header />
+    <body>
+
+      <!-- themeTwentytenPlugin menu demo -->
+      <trans-unit>
+        <source>Home</source>
+        <target>Início</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Settings</source>
+        <target>Configurações</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Users</source>
+        <target>Usuários</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Preferences</source>
+        <target>Preferências</target>
+      </trans-unit>
+      <trans-unit>
+        <source>About</source>
+        <target>Sobre</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Help</source>
+        <target>Ajuda</target>
+      </trans-unit>
+      <trans-unit>
+        <source>XHTML Test Page</source>
+        <target>Página Teste XHTML</target>
+      </trans-unit>
+
+      <!-- themeTwentytenPlugin sidebar demo -->
+      <trans-unit>
+        <source>Categories</source>
+        <target>Categorias</target>
+      </trans-unit>
+      <trans-unit>
+        <source>First</source>
+        <target>Primeiro</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Second</source>
+        <target>Segunda</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Third</source>
+        <target>Terceira</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Archives</source>
+        <target>Arquivo</target>
+      </trans-unit>
+      <trans-unit>
+        <source>June</source>
+        <target>Junho</target>
+      </trans-unit>
+      <trans-unit>
+        <source>July</source>
+        <target>Julho</target>
+      </trans-unit>
+      <trans-unit>
+        <source>August</source>
+        <target>Agosto</target>
+      </trans-unit>
+
+      <!-- themeTwentytenPlugin post demo -->
+      <trans-unit>
+        <source>Posted on %1%</source>
+        <target>Postado em %1%</target>
+      </trans-unit>
+      <trans-unit>
+        <source>by %1%</source>
+        <target>por %1%</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Published on</source>
+        <target>Publicado em</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Leave a comment</source>
+        <target>Deixar um comentário</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Edit</source>
+        <target>Editar</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Continue reading</source>
+        <target>Continue lendo</target>
+      </trans-unit>
+
+      <!-- themeTwentytenPlugin sidebar widget area demo -->
+      <trans-unit>
+        <source>Calendar</source>
+        <target>Agenda</target>
+      </trans-unit>
+
+      <!-- themeTwentytenPlugin footer widget area demo -->
+      <trans-unit>
+        <source>Recent Topics</source>
+        <target>Tópicos Recentes</target>
+      </trans-unit>
+      <trans-unit>
+        <source>september</source>
+        <target>setembro</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Pages</source>
+        <target>Páginas</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Search</source>
+        <target>Pesquisar</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Search for</source>
+        <target>Pesquisar por</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

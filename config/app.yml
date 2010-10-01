@@ -1,0 +1,20 @@
+all:
+  theme:
+    themes:
+
+      twentyten:
+        layout:       twentyten
+        templates_dir: themeTwentytenPlugin/templates/
+        stylesheets:  [../themeTwentytenPlugin/style.css]
+        javascripts:  []
+        # theme specific
+        header_image: path.jpg
+
+      # other wordpress template (sfThemePlugin theme or subtheme)
+      twentyten_onecolumn-page:
+        layout:       twentyten_onecolumn-page
+        templates_dir: themeTwentytenPlugin/templates/
+        stylesheets:  [../themeTwentytenPlugin/style.css]
+        javascripts:  []
+        # theme specific
+        header_image: sunset.jpg
