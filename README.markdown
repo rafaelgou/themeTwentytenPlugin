@@ -1,7 +1,7 @@
 # themeTwentytenPlugin #
 
 TwentyTen Wordpress theme version under symfony sfThemePlugin, as in
-(http://2010dev.wordpress.com/) or (http://wordpress.org/extend/themes/twentyten).
+<http://2010dev.wordpress.com/> or <http://wordpress.org/extend/themes/twentyten>.
 
 Goal: start point to migrate others Wordpress Templates.
 
@@ -16,73 +16,72 @@ change in CSS, and adapting the XHTML to symfony's template system.
 
 *From sfTheme2Plugin README*
 
-Because a dead plugin named sfThemePlugin is parked at the symfony-project site,
+*Because a dead plugin named sfThemePlugin is parked at the symfony-project site,
 this package is just a placeholder for the real sfThemePlugin which is located at
-<http://github.com/weaverryan/sfThemePlugin>.
+<http://github.com/weaverryan/sfThemePlugin>.*
 
   * Instaling Requirement
 
-    cd /path_to_symfony_project/
-    git submodule add git://github.com/weaverryan/sfThemePlugin.git plugins/sfThemePlugin
-    git submodule init
-    git submodule update
+        cd /path_to_symfony_project/
+        git submodule add git://github.com/weaverryan/sfThemePlugin.git plugins/sfThemePlugin
+        git submodule init
+        git submodule update
 
   * Activate the plugin in the `config/ProjectConfiguration.class.php` (if not instaled via package)
 
-    [php]
-    class ProjectConfiguration extends sfProjectConfiguration
-    {
-      public function setup()
-      {
-        $this->enablePlugins(array(
-          'sfThemePlugin',
-          '...'
-        ));
-      }
-    }
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            $this->enablePlugins(array(
+              'sfThemePlugin',
+              '...'
+            ));
+          }
+        }
 
 
 ## Instalation ##
 
   * Install the plugin (via a package)
 
-    ./symfony plugin:install themeTwentytenPlugin
+        ./symfony plugin:install themeTwentytenPlugin
 
   * Install the plugin (via a GitHub)
 
-    cd /path_to_symfony_project/
-    git submodule add git://github.com/rafaelgou/sfThemePlugin.git plugins/themeTwentytenPlugin
-    git submodule init
-    git submodule update
+        cd /path_to_symfony_project/
+        git submodule add git://github.com/rafaelgou/sfThemePlugin.git plugins/themeTwentytenPlugin
+        git submodule init
+        git submodule update
 
   * Activate the plugin in the `config/ProjectConfiguration.class.php` (if not instaled via package)
 
-    [php]
-    class ProjectConfiguration extends sfProjectConfiguration
-    {
-      public function setup()
-      {
-        $this->enablePlugins(array(
-          'sfThemePlugin',
-          'themeTwentytenPlugin',
-          '...'
-        ));
-      }
-    }
+          [php]
+          class ProjectConfiguration extends sfProjectConfiguration
+          {
+            public function setup()
+            {
+              $this->enablePlugins(array(
+                'sfThemePlugin',
+                'themeTwentytenPlugin',
+                '...'
+              ));
+            }
+          }
 
   * Publish assets for the plugin (if not instaled via package)
 
-    ./symfony plugin:publish-assets
+        ./symfony plugin:publish-assets
 
   * Clear Cache (if not instaled via package)
 
-    ./symfony cc
+        ./symfony cc
 
    * Optionally, activate the demo module in `apps/YOUR_APPLICATION/config/settings.yml`
 
-    all:
-      .settings:
-        enabled_modules: [default, ( other stuff ), theme_twentyten_demo]
+        all:
+          .settings:
+            enabled_modules: [default, ( ...other stuff ), theme_twentyten_demo]
 
 And you can access it with `http://www.your_symfony_domain.com/theme_twentyten_demo` and
 the XHTML Test Page in `http://www.your_symfony_domain.com/theme_twentyten_demo/xhtmlTestPage`.
@@ -90,17 +89,16 @@ the XHTML Test Page in `http://www.your_symfony_domain.com/theme_twentyten_demo/
 ## Using themeTwentytenPlugin ##
 
 It's important start reading sfThemePlugin documentation:
-
 <http://www.symfony-project.org/plugins/sfTheme2Plugin/0_8_0?tab=plugin_readme>
 
 ###Activating twentyten theme###
 
-Edit your
+Edit your `apps/YOUR_APPLICATION/config/settings.yml`
 
-    all:
-      theme:
-        controller_options:
-          default_theme:   twentyten
+        all:
+          theme:
+            controller_options:
+              default_theme:   twentyten
 
 And it's done.
 
@@ -129,77 +127,77 @@ After some adjustments, it's now possible to create themes plugins, with the fol
 
 ###Directory and file structure###
 
-    |-- config
-    |   `-- app.yml
-    |-- i18n
-    |   `-- mytheme.pt_BR.xml
-    |-- modules
-    |   `-- theme_mytheme_demo
-    |       |-- actions
-    |       |   `-- actions.class.php
-    |       |-- lib
-    |       |   `-- Basetheme_mytheme_demoActions.class.php
-    |       `-- templates
-    |           |-- indexSuccess.php
-    |           `-- xhtmlTestPageSuccess.php
-    |-- templates
-    |   |-- _footer.php
-    |   |-- _header.php
-    |   |-- _nav.php
-    |   |-- _sidebar.php
-    |   |-- mytheme.php
-    |   `-- mytheme_onecolumn-page.php
-    `-- web
-        |-- images
-        |   `-- image1.png
-        |   `-- image2.png
-        `-- style.css
+        |-- config
+        |   `-- app.yml
+        |-- i18n
+        |   `-- mytheme.pt_BR.xml
+        |-- modules
+        |   `-- theme_mytheme_demo
+        |       |-- actions
+        |       |   `-- actions.class.php
+        |       |-- lib
+        |       |   `-- Basetheme_mytheme_demoActions.class.php
+        |       `-- templates
+        |           |-- indexSuccess.php
+        |           `-- xhtmlTestPageSuccess.php
+        |-- templates
+        |   |-- _footer.php
+        |   |-- _header.php
+        |   |-- _nav.php
+        |   |-- _sidebar.php
+        |   |-- mytheme.php
+        |   `-- mytheme_onecolumn-page.php
+        `-- web
+            |-- images
+            |   `-- image1.png
+            |   `-- image2.png
+            `-- style.css
 
 ###Configuring the TwentyTen theme###
 
 You can access the theme configuration on `themeTwentytenPlugin/config/app.yml`
 
-    all:
-      theme:
-        themes:
+        all:
+          theme:
+            themes:
 
-          twentyten:
-            layout:       twentyten
-            templates_dir: themeTwentytenPlugin/templates/
-            stylesheets:  [../themeTwentytenPlugin/style.css]
-            javascripts:  []
-            # theme specific
-            header_image: path.jpg
+              twentyten:
+                layout:       twentyten
+                templates_dir: themeTwentytenPlugin/templates/
+                stylesheets:  [../themeTwentytenPlugin/style.css]
+                javascripts:  []
+                # theme specific
+                header_image: path.jpg
 
-          # other wordpress template (sfThemePlugin theme or subtheme)
-          twentyten_onecolumn-page:
-            layout:       twentyten_onecolumn-page
-            templates_dir: themeTwentytenPlugin/templates/
-            stylesheets:  [../themeTwentytenPlugin/style.css]
-            javascripts:  []
-            # theme specific
-            header_image: sunset.jpg
+              # other wordpress template (sfThemePlugin theme or subtheme)
+              twentyten_onecolumn-page:
+                layout:       twentyten_onecolumn-page
+                templates_dir: themeTwentytenPlugin/templates/
+                stylesheets:  [../themeTwentytenPlugin/style.css]
+                javascripts:  []
+                # theme specific
+                header_image: sunset.jpg
 
 First, the "id" of the themes are under all/theme/themes YAML tree:
 
-    all:
-      theme:
-        themes:
-          twentyten:
-          twentyten_onecolumn-page:
+        all:
+          theme:
+            themes:
+              twentyten:
+              twentyten_onecolumn-page:
 
 The options:
 
-    layout:       twentyten
-    templates_dir: themeTwentytenPlugin/templates/
+        layout:       twentyten
+        templates_dir: themeTwentytenPlugin/templates/
 
 are mandatory. **layout** is the template file with `.php` extension under **templates_dir**.
 See *Directory and file structure* above.
 
 The options:
 
-    stylesheets:  [../themeTwentytenPlugin/style.css]
-    javascripts:  []
+        stylesheets:  [../themeTwentytenPlugin/style.css]
+        javascripts:  []
 
 are optionals, but at least **stylesheets** are almost mandatory. It can point to
 any CSS file, a array of CSS files. The default location (under `web` directory inside the plugin,
@@ -217,19 +215,19 @@ To facilitate, the sfThemePlugin already loads I18N helper.
 
 All theme specific translation relies under `i18n/` directory, with the format:
 
-    themename.lang.xml
-    # Example:
-    mytheme.pt_BR.xml
-    # or in case
-    twentyten.pt_BR.xml
+        themename.lang.xml
+        # Example:
+        mytheme.pt_BR.xml
+        # or in case
+        twentyten.pt_BR.xml
 
 In templates you can do string translations as simple as:
 
-    <?php echo __('About', '', 'twentyten') ?>
+        <?php echo __('About', '', 'twentyten') ?>
 
 or, with parameters, as simple as:
 
-    <?php echo __('Posted on %1%', array('%1%'=>'08 set 2010'), 'twentyten') ?>
+        <?php echo __('Posted on %1%', array('%1%'=>'08 set 2010'), 'twentyten') ?>
 
 You can, of course, use others translations avaliable on the project, passing other
 catalogues as third parameter of function.
@@ -241,33 +239,33 @@ be a complete translation for the theme (as I don't know your focus).
 
 Edit `themeTwentytenPlugin/config/app.yml` and add your template information:
 
-    all:
-      theme:
-        themes:
+        all:
+          theme:
+            themes:
 
-          twentyten:
-# ( other stuff )
-          twentyten_newtemplate:
-            layout:       twentyten_newtemplate
-            templates_dir: themeTwentytenPlugin/templates/
-            stylesheets:  [../themeTwentytenPlugin/style.css]
-            javascripts:  []
-            # theme specific
-            header_image: sunset.jpg
+              twentyten:
+        # ( ...other stuff )
+              twentyten_newtemplate:
+                layout:       twentyten_newtemplate
+                templates_dir: themeTwentytenPlugin/templates/
+                stylesheets:  [../themeTwentytenPlugin/style.css]
+                javascripts:  []
+                # theme specific
+                header_image: sunset.jpg
 
 Create the template file under `themeTwentytenPlugin/templates/`, that **MUST** be
 the `layout` option followed by `.php` extension. A good start is to copy from another
 template:
 
-    cd themeTwentytenPlugin/templates/
-    cp twentyten.php twentyten_newtemplate.php
+        cd themeTwentytenPlugin/templates/
+        cp twentyten.php twentyten_newtemplate.php
 
 To get any config information, use in template the `sf_user` variable:
 
-    # _header.php
-    <?php echo image_tag('../themeTwentytenPlugin/images/headers/' .
-                  $sf_user->getThemeConfig('header_image'),
-                  array('alt'=>'Header Images')) ?>
+        # _header.php
+        <?php echo image_tag('../themeTwentytenPlugin/images/headers/' .
+                      $sf_user->getThemeConfig('header_image'),
+                      array('alt'=>'Header Images')) ?>
 
 
 You **MUST** use the theme name as a prefix, as symfony can get this name as global
@@ -276,7 +274,7 @@ templates directly. So, is a REALLY BAD idea use names as `layout.php`.
 Just edit the template as a normal symfony template, of course you **MUST** include the
 content somewhere with the code:
 
-    <?php echo $sf_content ?>
+        <?php echo $sf_content ?>
 
 Mimeting the Wordpress templates, *header*, *footer*, *nav* and *sidebar* are symfony partials,
 as *_header.php*, *_footer.php*, *_nav.php* and *_sidebar.php*
@@ -286,29 +284,29 @@ templates, but not mandatory.
 But the important thing is that you can't call this partials with `include_partial` function
 inside the templates as you used to - symfony won't find them, even if you user the
 
-    <?php include_partial('global/header') ?>
+        <?php include_partial('global/header') ?>
 
 syntax. The framework will look at `apps/YOUR_APPLICATION/templates` directory, so, it's useless.
 
 The right way is to use `include_theme_partial` as you can see in
 `themeTwentytenPlugin/templates/twentyten.php` template
 
-    <?php include_theme_partial('header') ?>
+        <?php include_theme_partial('header') ?>
 
-    <div id="main">
+        <div id="main">
 
-    <?php include_theme_partial('sidebar') ?>
+        <?php include_theme_partial('sidebar') ?>
 
-    <div id="container">
-      <div id="content">
+        <div id="container">
+          <div id="content">
 
-    <?php echo $sf_content ?>
-      </div><!-- #content -->
-    </div><!-- #container -->
+        <?php echo $sf_content ?>
+          </div><!-- #content -->
+        </div><!-- #container -->
 
-    </div><!-- #main -->
+        </div><!-- #main -->
 
-    <?php include_theme_partial('footer') ?>
+        <?php include_theme_partial('footer') ?>
 
 ##Converting a Wordpress Theme##
 
@@ -324,101 +322,101 @@ Don't just copy this plugin! Make your own clean plugin! You'd better install an
 [sfTaskExtraPlugin](http://www.symfony-project.org/plugins/sfTaskExtraPlugin) that
 turns the work so much simple - that's what we're going to guide you know.
 
-    ./symfony plugin:install sfTaskExtraPlugin
+        ./symfony plugin:install sfTaskExtraPlugin
 
 Now, considering you are going to create the theme 'Basic', use the followings command:
 
-    ./symfony generate:plugin themeBasicPlugin
-    ./symfony generate:plugin-module themeBasicPlugin theme_basic_demo
+        ./symfony generate:plugin themeBasicPlugin
+        ./symfony generate:plugin-module themeBasicPlugin theme_basic_demo
 
 to create the plugin and a demo module (really usefull as we'll soon).
 
 Create the missing directories:
 
-    mkdir plugins/themeBasicPlugin/templates
-    mkdir plugins/themeBasicPlugin/web
+        mkdir plugins/themeBasicPlugin/templates
+        mkdir plugins/themeBasicPlugin/web
 
 If you want to internatinalized the theme, create also:
 
-    mkdir plugins/themeBasicPlugin/i18n
+      mkdir plugins/themeBasicPlugin/i18n
 
 Unpack the Wordpress Theme under plugins/themeBasicPlugin/web, with no root directory,
 getting something like that:
 
-    `-- web
-      |-- 404.php
-      |-- archive.php
-      |-- attachment.php
-      |-- author.php
-      |-- category.php
-      |-- comments.php
-      |-- editor-style-rtl.css
-      |-- editor-style.css
-      |-- footer.php
-      |-- functions.php
-      |-- header.php
-      |-- images
-      |   |-- headers
-      |   |   |-- berries-thumbnail.jpg
-      |   |   |-- berries.jpg
-      |   |   |-- cherryblossoms-thumbnail.jpg
-      |   |   |-- cherryblossoms.jpg
-      |   |   |-- concave-thumbnail.jpg
-      |   |   |-- concave.jpg
-      |   |   |-- fern-thumbnail.jpg
-      |   |   |-- fern.jpg
-      |   |   |-- forestfloor-thumbnail.jpg
-      |   |   |-- forestfloor.jpg
-      |   |   |-- inkwell-thumbnail.jpg
-      |   |   |-- inkwell.jpg
-      |   |   |-- path-thumbnail.jpg
-      |   |   |-- path.jpg
-      |   |   |-- sunset-thumbnail.jpg
-      |   |   `-- sunset.jpg
-      |   `-- wordpress.png
-      |-- index.php
-      |-- languages
-      |   |-- pt_BR.mo
-      |   |-- pt_BR.po
-      |   `-- twentyten.pot
-      |-- license.txt
-      |-- loop.php
-      |-- onecolumn-page.php
-      |-- page.php
-      |-- rtl.css
-      |-- screenshot.png
-      |-- search.php
-      |-- sidebar-footer.php
-      |-- sidebar.php
-      |-- single.php
-      |-- style.css
-      `-- tag.php
+        `-- web
+          |-- 404.php
+          |-- archive.php
+          |-- attachment.php
+          |-- author.php
+          |-- category.php
+          |-- comments.php
+          |-- editor-style-rtl.css
+          |-- editor-style.css
+          |-- footer.php
+          |-- functions.php
+          |-- header.php
+          |-- images
+          |   |-- headers
+          |   |   |-- berries-thumbnail.jpg
+          |   |   |-- berries.jpg
+          |   |   |-- cherryblossoms-thumbnail.jpg
+          |   |   |-- cherryblossoms.jpg
+          |   |   |-- concave-thumbnail.jpg
+          |   |   |-- concave.jpg
+          |   |   |-- fern-thumbnail.jpg
+          |   |   |-- fern.jpg
+          |   |   |-- forestfloor-thumbnail.jpg
+          |   |   |-- forestfloor.jpg
+          |   |   |-- inkwell-thumbnail.jpg
+          |   |   |-- inkwell.jpg
+          |   |   |-- path-thumbnail.jpg
+          |   |   |-- path.jpg
+          |   |   |-- sunset-thumbnail.jpg
+          |   |   `-- sunset.jpg
+          |   `-- wordpress.png
+          |-- index.php
+          |-- languages
+          |   |-- pt_BR.mo
+          |   |-- pt_BR.po
+          |   `-- twentyten.pot
+          |-- license.txt
+          |-- loop.php
+          |-- onecolumn-page.php
+          |-- page.php
+          |-- rtl.css
+          |-- screenshot.png
+          |-- search.php
+          |-- sidebar-footer.php
+          |-- sidebar.php
+          |-- single.php
+          |-- style.css
+          `-- tag.php
 
 You must left only images, CSS and JS files. So, in this case, you will remain with just:
 
-    |-- images
-    |   |-- headers
-    |   |   |-- berries-thumbnail.jpg
-    |   |   |-- berries.jpg
-    |   |   |-- cherryblossoms-thumbnail.jpg
-    |   |   |-- cherryblossoms.jpg
-    |   |   |-- concave-thumbnail.jpg
-    |   |   |-- concave.jpg
-    |   |   |-- fern-thumbnail.jpg
-    |   |   |-- fern.jpg
-    |   |   |-- forestfloor-thumbnail.jpg
-    |   |   |-- forestfloor.jpg
-    |   |   |-- inkwell-thumbnail.jpg
-    |   |   |-- inkwell.jpg
-    |   |   |-- path-thumbnail.jpg
-    |   |   |-- path.jpg
-    |   |   |-- sunset-thumbnail.jpg
-    |   |   `-- sunset.jpg
-    |   `-- wordpress.png
-    |-- editor-style-rtl.css
-    |-- editor-style.css
-    |-- rtl.css
-    `-- style.css
+        |-- images
+        |   |-- headers
+        |   |   |-- berries-thumbnail.jpg
+        |   |   |-- berries.jpg
+        |   |   |-- cherryblossoms-thumbnail.jpg
+        |   |   |-- cherryblossoms.jpg
+        |   |   |-- concave-thumbnail.jpg
+        |   |   |-- concave.jpg
+        |   |   |-- fern-thumbnail.jpg
+        |   |   |-- fern.jpg
+        |   |   |-- forestfloor-thumbnail.jpg
+        |   |   |-- forestfloor.jpg
+        |   |   |-- inkwell-thumbnail.jpg
+        |   |   |-- inkwell.jpg
+        |   |   |-- path-thumbnail.jpg
+        |   |   |-- path.jpg
+        |   |   |-- sunset-thumbnail.jpg
+        |   |   `-- sunset.jpg
+        |   `-- wordpress.png
+        |-- editor-style-rtl.css
+        |-- editor-style.css
+        |-- rtl.css
+        `-- style.css
 
 As we want a basic support, so we just need the `style.css` stylesheet.
 
@@ -426,79 +424,79 @@ As we want a basic support, so we just need the `style.css` stylesheet.
 
   * Activate the plugin in the `config/ProjectConfiguration.class.php`
 
-    [php]
-    class ProjectConfiguration extends sfProjectConfiguration
-    {
-      public function setup()
-      {
-        $this->enablePlugins(array(
-          'sfThemePlugin',
-          'themeBasicPlugin',
-          '...'
-        ));
-      }
-    }
+        [php]
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            $this->enablePlugins(array(
+              'sfThemePlugin',
+              'themeBasicPlugin',
+              '...'
+            ));
+          }
+        }
 
   * Publish assets for the plugin
 
-    ./symfony plugin:publish-assets
+        ./symfony plugin:publish-assets
 
   * Clear Cache (if not instaled via package)
 
-    ./symfony cc
+        ./symfony cc
 
    * Activate the demo module in `apps/YOUR_APPLICATION/config/settings.yml`
 
-    all:
-      .settings:
-        enabled_modules: [default, ( other stuff ), theme_basic_demo]
+        all:
+          .settings:
+            enabled_modules: [default, ( other stuff ), theme_basic_demo]
 
 ###Configuring first theme####
 
 Create the file `plugins/themeBasicPlugin/config/app.yml`, pointing to the CSS and JS
 files in your theme:
 
-    all:
-      theme:
-        themes:
-          basic:
-            layout:       basic
-            templates_dir: themeBasicPlugin/templates/
-            stylesheets:  [../themeBasicPlugin/style.css]
-            javascripts:  []
+        all:
+          theme:
+            themes:
+              basic:
+                layout:       basic
+                templates_dir: themeBasicPlugin/templates/
+                stylesheets:  [../themeBasicPlugin/style.css]
+                javascripts:  []
 
 And create the themeBasicPlugin/templates/basic.php
 
-    touch plugins/themeBasicPlugin/templates/basic.php
+        touch plugins/themeBasicPlugin/templates/basic.php
 
 To facilitate the conversion, let's create some demo pages. The most simple is use the XHTML Test Page
 as index of the demo. Copy from the themeTwentyentPlugin as the following command:
 
-    cp plugins/themeTwentytenPlugin/modules/theme_twentyten_demo/templates/xhtmlTestPageSuccess.php \
-    plugins/themeBasicPlugin/modules/theme_basic_demo/templates/indexSuccess.php
+        cp plugins/themeTwentytenPlugin/modules/theme_twentyten_demo/templates/xhtmlTestPageSuccess.php \
+        plugins/themeBasicPlugin/modules/theme_basic_demo/templates/indexSuccess.php
 
 and create the action in plugins/themeBasicPlugin/modules/theme_basic_demo/action/actions.class.php
 
-    <?php
+        <?php
 
-    require_once dirname(__FILE__).'/../lib/Basetheme_basic_demoActions.class.php';
+        require_once dirname(__FILE__).'/../lib/Basetheme_basic_demoActions.class.php';
 
-    /**
-     * theme_twentyten_demo actions.
-     *
-     * @package    themeBasicPlugin
-     * @subpackage theme_basic_demo
-     * @author     Your name here
-     * @version    SVN: $Id: actions.class.php 12534 2008-11-01 13:38:27Z Kris.Wallsmith $
-     */
-    class theme_basic_demoActions extends Basetheme_basic_demoActions
-    {
+        /**
+         * theme_twentyten_demo actions.
+         *
+         * @package    themeBasicPlugin
+         * @subpackage theme_basic_demo
+         * @author     Your name here
+         * @version    SVN: $Id: actions.class.php 12534 2008-11-01 13:38:27Z Kris.Wallsmith $
+         */
+        class theme_basic_demoActions extends Basetheme_basic_demoActions
+        {
 
-      public function executeIndex(sfWebRequest $request)
-      {
-      }
+          public function executeIndex(sfWebRequest $request)
+          {
+          }
 
-    }
+        }
 
 Now you have a test page accessible from `http://www.your_symfony_domain.com/theme_basic_demo?sf_theme=basic`.
 
@@ -527,9 +525,10 @@ guidelines:
 
 Back to the sfTaskExtraPlugin. It will help to package the plugin
 
-    ./symfony plugin:package themeBasicPlugin
+      ./symfony plugin:package themeBasicPlugin
 
-Now inside the themeBasicPlugin you get the package, and you can install in others projects.
+Now inside the themeBasicPlugin you get the package, something like themeBasicPlugin.tar.gz,
+and you can install in others projects.
 
 Or, better, plublish in symfony repository...
 
