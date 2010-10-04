@@ -250,7 +250,8 @@ Edit `themeTwentytenPlugin/config/app.yml` and add your template information:
               twentyten:
         # ( ...other stuff )
               twentyten_newtemplate:
-                layout:       twentyten_newtemplate
+                description:   Wordpress TwentyTen
+                layout:        twentyten_newtemplate
                 templates_dir: themeTwentytenPlugin/templates/
                 stylesheets:  [../themeTwentytenPlugin/style.css]
                 javascripts:  []
@@ -464,7 +465,8 @@ files in your theme:
           theme:
             themes:
               basic:
-                layout:       basic
+                description:   Basic Theme
+                layout:        basic
                 templates_dir: themeBasicPlugin/templates/
                 stylesheets:  [../themeBasicPlugin/style.css]
                 javascripts:  []
