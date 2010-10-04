@@ -265,11 +265,11 @@ template:
         cd themeTwentytenPlugin/templates/
         cp twentyten.php twentyten_newtemplate.php
 
-To get any config information, use in template the `sf_user` variable:
+To get any config information, use in template the `sf_theme` variable:
 
         # _header.php
         <?php echo image_tag('../themeTwentytenPlugin/images/headers/' .
-                      $sf_user->getThemeConfig('header_image'),
+                      $sf_theme->getConfig('header_image'),
                       array('alt'=>'Header Images')) ?>
 
 
