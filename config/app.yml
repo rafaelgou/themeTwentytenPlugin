@@ -3,6 +3,7 @@ all:
     themes:
 
       twentyten:
+        description:   Wordpress TwentyTen
         layout:       twentyten
         templates_dir: themeTwentytenPlugin/templates/
         stylesheets:  [../themeTwentytenPlugin/style.css]
@@ -12,6 +13,7 @@ all:
 
       # other wordpress template (sfThemePlugin theme or subtheme)
       twentyten_onecolumn-page:
+        description:   Wordpress TwentyTen One Column
         layout:       twentyten_onecolumn-page
         templates_dir: themeTwentytenPlugin/templates/
         stylesheets:  [../themeTwentytenPlugin/style.css]
